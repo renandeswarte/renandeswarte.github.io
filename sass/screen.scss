@@ -1,0 +1,25 @@
+@import "compass/reset";
+@import "bootstrap";
+
+/*
+* * Global
+*/
+
+body{
+  * {
+    font-family: Helvetica;
+    box-sizing:border-box;
+  }
+  .bloc{
+    background-color: red;
+    height: 100px;
+  }
+  .content {
+    height: 300px;
+    &.snake {
+      background-image: url('../pictures/snake.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    } 
+  }
+}
