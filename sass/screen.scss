@@ -32,6 +32,9 @@ body {
       height: 150px;
       font-size: 18px;
       .inner-text{
+        h4 {
+          font-weight: bold;
+        }
         display: table-cell;
         vertical-align: middle;
         margin-bottom: 0px;
@@ -68,23 +71,64 @@ body {
     }
     .section {
       height: 300px;
-      &.section-1{background-color: #EEBB00}
+      display: table;
+      .inner-section {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      &.text {
+        background-color: #9AD3DE;
+        color: #FFF;
+        font-size: 18px;
+      }
       &.snake {
         background-image: url('../pictures/bg/snake.png');
         background-size: cover;
         background-repeat: no-repeat;
+        background-color: #EEEEEE;
       }
-      &.section-3{
-        background-color: #EEBB00
-      }
-      &.section-4{
+      &.cube{
         background-image: url('../pictures/bg/cube-speed.gif');
         background-repeat: no-repeat;
+        p {
+          color: #000;
+        }
       }
     }
   }
 
   .footer{
+  }
 
+  // Mobile Overide
+  @media (max-width: 767px) {
+    .header {
+      padding: 20px 0;
+      .picture-container {
+        .face-picture {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .informations {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .inner-text{
+          h4 {
+            text-align: center;
+          }
+        }
+      }
+      .header-links {
+        text-align: center;
+        height: auto;
+        .inner-text {
+          display: inline-block;
+          text-align: left;
+        }
+      }
+    }
   }
 }
+
+
