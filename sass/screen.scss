@@ -72,10 +72,8 @@ body {
       padding: 20px 0;
     }
     .link {
-      &.see-project{
+      &.project-link{
         position: absolute;
-        bottom: 20px;
-        right: 20px;
         font-size: 14px;
         line-height: 14px;
         padding: 11px 10px 7px 37px;
@@ -98,6 +96,14 @@ body {
           background-color: rgba(0,0,0,0.6);
           text-decoration: none;
           color: #EEEEEE;
+        }
+        &.see-project {
+          bottom: 20px;
+          right: 20px;
+        }
+        &.see-github {
+          bottom: 60px;
+          right: 20px;
         }
         &.expand {
           width: 150px;
