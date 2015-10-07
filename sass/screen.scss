@@ -6,6 +6,8 @@
 * * Global
 */
 
+$themeColor: #9AD3DE;
+
 body {
   * {
     font-family: Helvetica;
@@ -70,18 +72,36 @@ body {
       padding: 20px 0;
     }
     .link {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      font-size: 40px;
-      line-height: 40px;
-      padding: 5px;
-      width: 40px;
-      height: 40px;
-      color: rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      &:hover {
-        color: #000000;
+      &.see-project{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 14px;
+        line-height: 14px;
+        padding: 11px 10px 7px 37px;
+        color: $themeColor;
+        border-radius: 20px;
+        background-color: rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        width: 0px;
+        height: 36px;
+        padding-right: 0px;
+        white-space: nowrap;
+        i {
+          position: absolute;
+          left: 10px;
+          top: 8px;
+          font-size: 20px;
+        }
+        &:visited, &:hover {
+          background-color: rgba(0,0,0,0.6);
+          text-decoration: none;
+          color: #EEEEEE;
+        }
+        &.expand {
+          width: 150px;
+        }
       }
     }
     .section {
@@ -93,7 +113,7 @@ body {
         vertical-align: middle;
       }
       &.text {
-        background-color: #9AD3DE;
+        background-color: $themeColor;
         color: #FFF;
         font-size: 18px;
       }
@@ -116,43 +136,43 @@ body {
   .footer{
   }
 
-  // Mobile Overide
-  @media (max-width: 767px) {
-    .header {
-      padding: 20px 0;
-      .picture-container {
-        .face-picture {
-          width: 100px;
-          height: 100px;
-        }
+// Mobile Overide
+@media (max-width: 767px) {
+  .header {
+    padding: 20px 0;
+    .picture-container {
+      .face-picture {
+        width: 100px;
+        height: 100px;
       }
-      .informations {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        .inner-text{
-          h4 {
-            text-align: center;
-          }
-        }
-      }
-      .header-links {
-        text-align: center;
-        height: auto;
-        .inner-text {
-          display: block;
+    }
+    .informations {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .inner-text{
+        h4 {
           text-align: center;
-          a {
-            display: inline-block;
-            font-size: 0px;
-            i {
-              font-size: 40px;
-              padding: 0px 15px;
-            }
+        }
+      }
+    }
+    .header-links {
+      text-align: center;
+      height: auto;
+      .inner-text {
+        display: block;
+        text-align: center;
+        a {
+          display: inline-block;
+          font-size: 0px;
+          i {
+            font-size: 40px;
+            padding: 0px 15px;
           }
         }
       }
     }
   }
+}
 }
 
 
