@@ -74,23 +74,19 @@ body {
     .link {
       &.project-link{
         position: absolute;
-        font-size: 14px;
-        line-height: 14px;
-        padding: 11px 10px 7px 37px;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 10px 10px 10px 11px;
         color: $themeColor;
         border-radius: 20px;
         background-color: rgba(0,0,0,0.2);
         transition: all 0.3s ease;
         overflow: hidden;
-        width: 0px;
+        width: 36px;
         height: 36px;
-        padding-right: 0px;
         white-space: nowrap;
         i {
-          position: absolute;
-          left: 10px;
-          top: 8px;
-          font-size: 20px;
+          margin-right: 12px;
         }
         &:visited, &:hover {
           background-color: rgba(0,0,0,0.6);
@@ -106,7 +102,12 @@ body {
           right: 20px;
         }
         &.expand {
+          &.see-project {
+          width: 160px;
+        }
+        &.see-github {
           width: 150px;
+        }
         }
       }
     }
