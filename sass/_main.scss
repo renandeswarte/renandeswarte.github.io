@@ -3,6 +3,37 @@
     margin: 0px;
     padding: 20px 0;
   }
+  .section {
+    .inner-section-container {
+      position: relative;
+      height: 300px;
+      display: table;
+      .inner-section {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &.text {
+      background-color: $themeColor;
+      color: #FFF;
+      font-size: 18px;
+    }
+    &.snake {
+      background-image: url('../pictures/bg/snake.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #EEEEEE;
+    }
+    &.cube{
+      background-image: url('../pictures/bg/cube-speed.gif');
+      background-repeat: no-repeat;
+      p {
+        color: #000;
+      }
+    }
+  }
+
+  // Github & Project page links
   .link {
     &.project-link{
       position: absolute;
@@ -36,41 +67,111 @@
       }
       &.expand {
         &.see-project {
-        width: 160px;
-      }
-      &.see-github {
-        width: 150px;
-      }
-      }
-    }
-  }
-  .section {
-    .inner-section-container {
-      position: relative;
-      height: 300px;
-      display: table;
-      .inner-section {
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
-    &.text {
-      background-color: $themeColor;
-      color: #FFF;
-      font-size: 18px;
-    }
-    &.snake {
-      background-image: url('../pictures/bg/snake.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-color: #EEEEEE;
-    }
-    &.cube{
-      background-image: url('../pictures/bg/cube-speed.gif');
-      background-repeat: no-repeat;
-      p {
-        color: #000;
+          width: 160px;
+        }
+        &.see-github {
+          width: 150px;
+        }
       }
     }
   }
+
+  // Tech list
+  .technologies {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    ul {
+      display: inline-block;
+      margin-bottom: 0px;
+      height: 50px;
+      padding-right: 80px;
+      li {
+        display: inline-block;
+        margin-right: 5px;
+        &.tech {
+          width: 50px;
+          height: 50px;
+          // overflow: hidden;
+          opacity: 0.3;
+          border-radius: 50%;
+          -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+          box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+          transition: all 0.4s ease;
+          background-position: 50% 50%;
+          background-size: cover;
+          position: relative;
+          &:before {
+            transition: all 0.4s ease;
+            content: attr(data-techname);
+            position: absolute;
+            top: -20px;
+            color: #555;
+            width: 100%;
+            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            opacity: 0;
+          }
+          &:hover {
+            opacity: 1;
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  // Tech pictures
+  .technologies {
+    ul {
+      li {
+        &.tech {
+          &.angular {
+            background-image: url('../pictures/tech/angular.jpg');
+          }
+          &.grunt {
+            background-image: url('../pictures/tech/grunt.jpg');
+          }
+          &.bootstrap {
+            background-image: url('../pictures/tech/bootstrap.jpg');
+          }
+          &.firebase {
+            background-image: url('../pictures/tech/firebase.jpg');
+          }
+          &.mongolab {
+            background-image: url('../pictures/tech/mongolab.jpg');
+          }
+          &.html {
+            background-image: url('../pictures/tech/html.jpg');
+          }
+          &.js {
+            background-image: url('../pictures/tech/js.jpg');
+          }
+          &.css {
+            background-image: url('../pictures/tech/css.jpg');
+          }
+          &.node {
+            background-image: url('../pictures/tech/node.jpg');
+          }
+          &.gmaps {
+            background-image: url('../pictures/tech/gmaps.jpg');
+          }
+          &.sass {
+            background-image: url('../pictures/tech/sass.jpg');
+          }
+          &.fb {
+            background-image: url('../pictures/tech/fb.jpg');
+          }
+          &.jquery {
+            background-image: url('../pictures/tech/jquery.jpg');
+          }
+        }
+      }
+    }
+  }
+
+  
 }

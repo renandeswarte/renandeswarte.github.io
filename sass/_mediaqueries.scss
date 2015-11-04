@@ -34,4 +34,29 @@
       }
     }
   }
+
+   // Tech list
+  .main {
+    .technologies {
+      ul {
+        padding-right: 80px;
+        li {
+          &.tech {
+            width: 20px;
+            height: 20px;
+            &:before {
+              font-size: 0px;
+            }
+            &:hover {
+              opacity: 1;
+              &:before {
+                font-size: 0px;
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
 }
