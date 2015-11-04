@@ -1,185 +1,22 @@
 @import "compass/reset";
 @import "bootstrap";
 @import "fontawesome";
+@import "variables";
+@import "header";
+@import "main";
+@import "footer";
+@import "mediaqueries";
+
 
 /*
 * * Global
 */
-
-$themeColor: #9AD3DE;
 
 body {
   * {
     font-family: Helvetica;
     box-sizing:border-box;
   }
-
-  .header {
-    padding: 40px 0;
-    .picture-container {
-      .face-picture {
-        margin: 0 auto;
-        width: 150px;
-        height: 150px;
-        border: 5px solid #FFF;
-        border-radius: 50%;
-        -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
-        box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
-        background: url('../pictures/perso.jpg') no-repeat;
-        background-size: cover;
-      }
-    }
-    .informations {
-      display: table;
-      height: 150px;
-      font-size: 18px;
-      .inner-text{
-        h4 {
-          font-weight: bold;
-        }
-        display: table-cell;
-        vertical-align: middle;
-        margin-bottom: 0px;
-        text-align: justify;
-      }
-    }
-
-    .header-links {
-      display: table;
-      height: 150px;
-      .inner-text {
-        display: table-cell;
-        vertical-align: middle;
-        a {
-          display: block;
-          font-size: 20px;
-          color: #000;
-          &:visited, &:hover {
-            text-decoration: none;
-          }
-          .fa {
-            padding-right: 10px;
-          }
-        }
-      }
-    }
-  }
-
-
-  .main {
-    h3 {
-      margin: 0px;
-      padding: 20px 0;
-    }
-    .link {
-      &.project-link{
-        position: absolute;
-        font-size: 16px;
-        line-height: 16px;
-        padding: 10px 10px 10px 11px;
-        color: $themeColor;
-        border-radius: 20px;
-        background-color: rgba(0,0,0,0.2);
-        transition: all 0.3s ease;
-        overflow: hidden;
-        width: 36px;
-        height: 36px;
-        white-space: nowrap;
-        i {
-          margin-right: 12px;
-        }
-        &:visited, &:hover {
-          background-color: rgba(0,0,0,0.6);
-          text-decoration: none;
-          color: #EEEEEE;
-        }
-        &.see-project {
-          bottom: 20px;
-          right: 20px;
-        }
-        &.see-github {
-          bottom: 60px;
-          right: 20px;
-        }
-        &.expand {
-          &.see-project {
-          width: 160px;
-        }
-        &.see-github {
-          width: 150px;
-        }
-        }
-      }
-    }
-    .section {
-      height: 300px;
-      display: table;
-      position: relative;
-      .inner-section {
-        display: table-cell;
-        vertical-align: middle;
-      }
-      &.text {
-        background-color: $themeColor;
-        color: #FFF;
-        font-size: 18px;
-      }
-      &.snake {
-        background-image: url('../pictures/bg/snake.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: #EEEEEE;
-      }
-      &.cube{
-        background-image: url('../pictures/bg/cube-speed.gif');
-        background-repeat: no-repeat;
-        p {
-          color: #000;
-        }
-      }
-    }
-  }
-
-  .footer{
-  }
-
-// Mobile Overide
-@media (max-width: 767px) {
-  .header {
-    padding: 20px 0;
-    .picture-container {
-      .face-picture {
-        width: 100px;
-        height: 100px;
-      }
-    }
-    .informations {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      .inner-text{
-        h4 {
-          text-align: center;
-        }
-      }
-    }
-    .header-links {
-      text-align: center;
-      height: auto;
-      .inner-text {
-        display: block;
-        text-align: center;
-        a {
-          display: inline-block;
-          font-size: 0px;
-          i {
-            font-size: 40px;
-            padding: 0px 15px;
-          }
-        }
-      }
-    }
-  }
-}
 }
 
 

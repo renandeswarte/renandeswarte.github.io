@@ -1,0 +1,76 @@
+.main {
+  h3 {
+    margin: 0px;
+    padding: 20px 0;
+  }
+  .link {
+    &.project-link{
+      position: absolute;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 10px 10px 10px 11px;
+      color: $themeColor;
+      border-radius: 20px;
+      background-color: rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      width: 36px;
+      height: 36px;
+      white-space: nowrap;
+      text-decoration: none;
+      i {
+        margin-right: 12px;
+      }
+      &:visited, &:hover {
+        background-color: rgba(0,0,0,0.6);
+        text-decoration: none;
+        color: #EEEEEE;
+      }
+      &.see-project {
+        bottom: 20px;
+        right: 20px;
+      }
+      &.see-github {
+        bottom: 60px;
+        right: 20px;
+      }
+      &.expand {
+        &.see-project {
+        width: 160px;
+      }
+      &.see-github {
+        width: 150px;
+      }
+      }
+    }
+  }
+  .section {
+    .inner-section-container {
+      position: relative;
+      height: 300px;
+      display: table;
+      .inner-section {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &.text {
+      background-color: $themeColor;
+      color: #FFF;
+      font-size: 18px;
+    }
+    &.snake {
+      background-image: url('../pictures/bg/snake.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #EEEEEE;
+    }
+    &.cube{
+      background-image: url('../pictures/bg/cube-speed.gif');
+      background-repeat: no-repeat;
+      p {
+        color: #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.header {
+  padding: 40px 0;
+  .picture-container {
+    .face-picture {
+      margin: 0 auto;
+      width: 150px;
+      height: 150px;
+      border: 5px solid #FFF;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+      box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+      background: url('../pictures/perso.jpg') no-repeat;
+      background-size: cover;
+    }
+  }
+  .informations {
+    display: table;
+    height: 150px;
+    font-size: 18px;
+    .inner-text{
+      h4 {
+        font-weight: bold;
+      }
+      display: table-cell;
+      vertical-align: middle;
+      margin-bottom: 0px;
+      text-align: justify;
+    }
+  }
+
+  .header-links {
+    display: table;
+    height: 150px;
+    .inner-text {
+      display: table-cell;
+      vertical-align: middle;
+      a {
+        display: block;
+        font-size: 20px;
+        color: #000;
+        &:visited, &:hover {
+          text-decoration: none;
+        }
+        .fa {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
