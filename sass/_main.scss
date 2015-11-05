@@ -31,6 +31,14 @@
         color: #000;
       }
     }
+    &.shape{
+      background-image: url('../pictures/bg/shape-morphing.jpg');
+      background-size: cover;
+      background-position: 50% 50%;
+      p {
+        color: #EEE;
+      }
+    }
   }
 
   // Github & Project page links
@@ -40,7 +48,7 @@
       font-size: 16px;
       line-height: 16px;
       padding: 10px 10px 10px 11px;
-      color: $themeColor;
+      color: #EEE;
       border-radius: 20px;
       background-color: rgba(0,0,0,0.2);
       transition: all 0.3s ease;
