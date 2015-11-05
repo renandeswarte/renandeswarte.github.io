@@ -84,14 +84,14 @@
     ul {
       display: inline-block;
       margin-bottom: 0px;
-      height: 50px;
+      height: 40px;
       padding-right: 80px;
       li {
         display: inline-block;
-        margin-right: 5px;
+        margin-right: 10px;
         &.tech {
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
           // overflow: hidden;
           opacity: 0.3;
           border-radius: 50%;
@@ -108,7 +108,7 @@
             top: -20px;
             color: #555;
             width: 100%;
-            font-size: 11px;
+            font-size: 10px;
             text-align: center;
             font-weight: bold;
             opacity: 0;
@@ -146,6 +146,9 @@
           }
           &.html {
             background-image: url('../pictures/tech/html.jpg');
+          }
+          &.heroku {
+            background-image: url('../pictures/tech/heroku.jpg');
           }
           &.js {
             background-image: url('../pictures/tech/js.jpg');
