@@ -18,8 +18,21 @@
     height: 150px;
     font-size: 18px;
     .inner-text{
-      h4 {
+      text-align: center;
+      h2, h3 {
         font-weight: bold;
+      }
+      h2 {
+        font-size: 20px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-top: 0px;
+      }
+      p {
+        margin-bottom: 0px;
       }
       display: table-cell;
       vertical-align: middle;
@@ -47,4 +60,17 @@
       }
     }
   }
+}
+
+@media (max-width:480px) {
+  .header {
+    .informations {
+      .inner-text {
+       h2, h3, p {
+        text-align: center;
+      }
+    }
+  }
+}
+
 }
