@@ -26,19 +26,44 @@
           }
         }
       }
+      .tech {
+        &:before {
+          color: #FFF;
+        }
+      }
     }
+    &.gitconnect {
+      background-image: url('../pictures/bg/gitconnect.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #333;
+      .tech {
+        &:before {
+          color: #FFF;
+        }
+      }
+    }
+    // &.game {
+    //   background-image: url('../pictures/bg/game.jpg');
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   background-color: #333;
+    // }
     &.snake {
       background-image: url('../pictures/bg/snake.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-color: #EEEEEE;
     }
+    // &.which {
+    //   background-image: url('../pictures/bg/which.jpg');
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   background-color: #333;
+    // }
     &.cube{
       background-image: url('../pictures/bg/cube-speed.gif');
       background-repeat: no-repeat;
-      // p {
-      //   color: #000;
-      // }
     }
     &.shape {
       .shape-text {
