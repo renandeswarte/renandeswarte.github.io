@@ -1,8 +1,4 @@
 .main {
-  h3 {
-    margin: 0px;
-    padding: 20px 0;
-  }
   .section {
     .inner-section-container {
       position: relative;
@@ -11,12 +7,25 @@
       .inner-section {
         display: table-cell;
         vertical-align: middle;
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+        }
+        p {
+          font-size: 18px;
+          color: #000
+        }
       }
     }
     &.text {
       background-color: $themeColor;
-      color: #FFF;
-      font-size: 18px;
+      .inner-section-container {
+        .inner-section {
+          p, h2 {
+            color: #FFF;
+          }
+        }
+      }
     }
     &.snake {
       background-image: url('../pictures/bg/snake.png');
@@ -27,17 +36,34 @@
     &.cube{
       background-image: url('../pictures/bg/cube-speed.gif');
       background-repeat: no-repeat;
-      p {
-        color: #000;
+      // p {
+      //   color: #000;
+      // }
+    }
+    &.shape {
+      .shape-text {
+        display: table;
+        height: 300px;
+        .shape-inner {
+        display: table-cell;
+        vertical-align: middle;
+        // width: 100%;
+      }
       }
     }
-    &.shape{
-      background-image: url('../pictures/bg/shape-morphing.jpg');
-      background-size: cover;
-      background-position: 50% 50%;
-      p {
-        color: #EEE;
-      }
+    .shape-pic-container {
+      text-align: center;
+      .shape-pic{
+        background-image: url('../pictures/bg/shape-morphing-2.png');
+        background-size: cover;
+        background-position: 50% 50%;
+      // width: 100%;
+      // height: 300px;
+      border-radius: 50%;
+      margin: 10px auto;
+      width: 100%;
+      max-width: 280px;
+    }
     }
   }
 
@@ -182,7 +208,31 @@
         }
       }
     }
-  }
-
-  
+  }  
 }
+
+@media (max-width:479px) {
+  .main {
+    .section {
+      .inner-section-container {
+        position: relative;
+        height: 300px;
+        display: table;
+        .inner-section {
+          display: table-cell;
+          vertical-align: middle;
+          h2 {
+            font-size: 20px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
