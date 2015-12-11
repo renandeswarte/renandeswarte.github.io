@@ -13,7 +13,8 @@
         }
         p {
           font-size: 18px;
-          color: #000
+          color: #000;
+          // margin-bottom: 20px;
         }
       }
     }
@@ -33,10 +34,10 @@
       }
     }
     &.gitconnect {
-      background-image: url('../pictures/bg/gitconnect.jpg');
+      // background-image: url('../pictures/bg/gitconnect.jpg');
       background-size: cover;
       background-repeat: no-repeat;
-      background-color: #333;
+      // background-color: #333;
       .tech {
         &:before {
           color: #FFF;
@@ -50,7 +51,7 @@
     //   background-color: #333;
     // }
     &.snake {
-      background-image: url('../pictures/bg/snake.png');
+      // background-image: url('../pictures/bg/snake.png');
       background-size: cover;
       background-repeat: no-repeat;
       background-color: #EEEEEE;
@@ -72,7 +73,6 @@
         .shape-inner {
         display: table-cell;
         vertical-align: middle;
-        // width: 100%;
       }
       }
     }
@@ -82,13 +82,13 @@
         background-image: url('../pictures/bg/shape-morphing-2.png');
         background-size: cover;
         background-position: 50% 50%;
-      // width: 100%;
-      // height: 300px;
-      border-radius: 50%;
-      margin: 10px auto;
-      width: 100%;
-      max-width: 280px;
-    }
+        // width: 100%;
+        // height: 300px;
+        border-radius: 50%;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 280px;
+      }
     }
   }
 
@@ -273,6 +273,7 @@
           }
           p {
             font-size: 14px;
+            margin-bottom: 50px;
           }
         }
       }
