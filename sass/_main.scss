@@ -2,11 +2,12 @@
   .section {
     .inner-section-container {
       position: relative;
-      height: 300px;
+      min-height: 300px;
       display: table;
       .inner-section {
         display: table-cell;
         vertical-align: middle;
+        padding-right: 40px;
         h2 {
           font-size: 24px;
           font-weight: bold;
@@ -17,18 +18,25 @@
         }
       }
     }
-    &.text {
+    // Theme color bloc modifications
+    &.theme-color {
       background-color: $themeColor;
       .inner-section-container {
         .inner-section {
           p, h2 {
-            color: #FFF;
+            color: $whiteColor;
           }
+        }
+      }
+      .project-link {
+        color: #EEE;
+        &:visited, &:hover {
+          color: #EEE;
         }
       }
       .tech {
         &:before {
-          color: #FFF;
+          color: $whiteColor;
         }
       }
     }
@@ -37,7 +45,7 @@
       background-repeat: no-repeat;
       .tech {
         &:before {
-          color: #FFF;
+          color: $whiteColor;
         }
       }
     }
@@ -50,13 +58,16 @@
       background-repeat: no-repeat;
     }
     &.shape {
+      .inner-section {
+        padding-right: 0px;
+      }
       .shape-text {
         display: table;
         height: 300px;
         .shape-inner {
-        display: table-cell;
-        vertical-align: middle;
-      }
+          display: table-cell;
+          vertical-align: middle;
+        }
       }
     }
     .shape-pic-container {
@@ -80,7 +91,7 @@
       font-size: 16px;
       line-height: 16px;
       padding: 10px 10px 10px 11px;
-      color: #EEE;
+      color: $whiteColor;
       border-radius: 20px;
       background-color: rgba(0,0,0,0.2);
       transition: all 0.3s ease;
@@ -89,21 +100,31 @@
       height: 36px;
       white-space: nowrap;
       text-decoration: none;
+      right: 20px;
       i {
         margin-right: 12px;
       }
       &:visited, &:hover {
         background-color: rgba(0,0,0,0.6);
         text-decoration: none;
-        color: #EEEEEE;
+        color: $whiteColor;
       }
-      &.see-project {
+      &.see-app {
+        i {
+          margin-right: 13px;
+        }
+      }
+      &.first {
         bottom: 20px;
-        right: 20px;
       }
-      &.see-github {
+      &.second {
         bottom: 60px;
-        right: 20px;
+      }
+      &.third {
+        bottom: 100px;
+      }
+      &.fourth {
+        bottom: 140px;
       }
       &.expand {
         &.see-project {
@@ -111,6 +132,12 @@
         }
         &.see-github {
           width: 150px;
+        }
+        &.see-app {
+          width: 130px;
+        }
+        &.see-api {
+          width: 140px;
         }
       }
     }
@@ -168,6 +195,12 @@
     ul {
       li {
         &.tech {
+          &.apple {
+            background-image: url('../pictures/tech/apple.jpg');
+          }
+          &.cordova {
+            background-image: url('../pictures/tech/cordova.jpg');
+          }
           &.angular {
             background-image: url('../pictures/tech/angular.jpg');
           }
@@ -242,7 +275,7 @@
     .section {
       .inner-section-container {
         position: relative;
-        height: 300px;
+        min-height: 300px;
         display: table;
         .inner-section {
           display: table-cell;

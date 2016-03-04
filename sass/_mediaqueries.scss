@@ -61,3 +61,28 @@
     }
   }
 }
+
+@media (max-width:479px) {
+  .main {
+    .section {
+      .inner-section-container {
+        position: relative;
+        min-height: 300px;
+        display: table;
+        .inner-section {
+          display: table-cell;
+          vertical-align: middle;
+          h2 {
+            font-size: 20px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 14px;
+            // margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
