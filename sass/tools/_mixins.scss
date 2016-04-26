@@ -1,0 +1,12 @@
+@mixin box-shadow($top, $right, $left, $bottom, $color) {
+  -webkit-box-shadow: $top $right $left $bottom $color;
+  -moz-box-shadow: $top $right $left $bottom $color;
+  box-shadow: $top $right $left $bottom $color;
+}
+
+@mixin bg-cover() {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+

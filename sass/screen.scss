@@ -1,7 +1,11 @@
+// Tools
 @import "compass/reset";
-@import "bootstrap";
-@import "fontawesome";
+@import "tools/bootstrap";
+@import "tools/fontawesome";
+@import "tools/mixins";
+// Theme
 @import "variables";
+// Views
 @import "header";
 @import "main";
 @import "footer";
