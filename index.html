@@ -41,22 +41,22 @@
 	<!-- ***** Main Container ***** -->
 	<div class="main row">
 
-			<!-- Default Text Section -->
-		<div class="section theme-color col-xs-12">
+		<!-- Default Text Section -->
+		<section class="section theme-color col-xs-12">
 			<div class="inner-section-container container">
-				<div class="inner-section">
+				<div class="inner-section col-xs-12 col-sm-9">
 					<h2>AskUs</h2>
 					<p>
 						Mobile application available on iPhone and using Facebook API<br>
 						Share post with 2 choices, ask the community to vote, see what you Facebook's friend are posting and help them make a decision
 					</p>
+					
 					<div class="technologies">
 						<ul>
 							<li class="tech apple" data-techname="iOS"></li>
-							<li class="tech ionic" data-techname="ionic"></li>
-<!-- 							<li class="tech cordova" data-techname="Cordova"></li>
- -->							<li class="tech angular" data-techname="Angular"></li>
- 							<li class="tech fb" data-techname="FB API"></li>
+							<li class="tech ionic" data-techname="Ionic"></li>
+							<li class="tech angular" data-techname="Angular"></li>
+							<li class="tech fb" data-techname="FB API"></li>
 							<li class="tech aws" data-techname="AWS"></li>
 							<li class="tech sass" data-techname="Sass"></li>
 							<li class="tech gulp" data-techname="gulp"></li>
@@ -65,24 +65,36 @@
 							<li class="tech heroku" data-techname="Heroku"></li>
 						</ul>
 					</div>
-					<!-- *********************** 
-					************ Add Github API URL *********
-					****************************-->
-					<!-- <a href="" target="_blank" class="link project-link fourth see-api"><i class="fa fa-server"></i>See the API</a> -->
-					<a href="https://askus-app.herokuapp.com" target="_blank" class="link project-link second see-project"><i class="fa fa-chevron-circle-right"></i>See the website</a>
-					<!-- *********************** 
-					************ Add Github URL *********
-					****************************-->
-					<!-- <a href="" target="_blank" class="link project-link second see-github"><i class="fa fa-github"></i>See on Github</a> -->
-					<a href="https://itunes.apple.com/us/app/askus/id1102293993" target="_blank" class="link project-link first see-app"><i class="fa fa-apple"></i>Get the app</a>
+
+					<div class="links-container">
+						<ul>
+							<li class="link project-link see-app">
+								<a href="https://itunes.apple.com/us/app/askus/id1102293993" target="_blank" 
+								><i class="fa fa-apple"></i>Get the app</a>	
+							</li>
+							<li class="link project-link see-project">
+								<a href="https://askus-app.herokuapp.com" target="_blank" ><i class="fa fa-chevron-circle-right"></i>See the website</a>
+							</li>
+							<!-- <li class="link project-link see-api">
+								<a href="" target="_blank"><i class="fa fa-server"></i>See the API</a>
+							</li>
+							<li class="link project-link see-github">
+								<a href="" target="_blank"><i class="fa fa-github"></i>See on Github</a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+
+				<div class="pictures-container col-xs-12 col-sm-3">	
+					<img class="img-responsive" src="pictures/projects/askus.png">
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- Default Text Section -->
-		<div class="section col-xs-12">
+		<section class="section col-xs-12">
 			<div class="inner-section-container container">
-				<div class="inner-section">
+				<div class="inner-section col-xs-12 col-sm-9">
 					<h2>Kidkards</h2>
 					<p>
 						Mobile application for kids available on iPhone, iPod and iPad.<br>
@@ -103,19 +115,30 @@
 							<li class="tech heroku" data-techname="Heroku"></li>
 						</ul>
 					</div>
-					<!-- *********************** 
-					************ Add Github API URL *********
-					****************************-->
-					<!-- <a href="" target="_blank" class="link project-link fourth see-api"><i class="fa fa-server"></i>See the API</a> -->
-					<a href="https://kidkards.herokuapp.com" target="_blank" class="link project-link second see-project"><i class="fa fa-chevron-circle-right"></i>See the website</a>
-					<!-- *********************** 
-					************ Add Github URL *********
-					****************************-->
-					<!-- <a href="" target="_blank" class="link project-link second see-github"><i class="fa fa-github"></i>See on Github</a> -->
-					<a href="https://itunes.apple.com/us/app/kidkards/id1088182089" target="_blank" class="link project-link first see-app"><i class="fa fa-apple"></i>Get the app</a>
+
+					<div class="links-container">
+						<ul>
+							<li class="link project-link see-app">
+								<a href="https://itunes.apple.com/us/app/kidkards/id1088182089" target="_blank" 
+								><i class="fa fa-apple"></i>Get the app</a>
+							</li>
+							<li class="link project-link see-project">
+								<a href="https://kidkards.herokuapp.com" target="_blank" ><i class="fa fa-chevron-circle-right"></i>See the website</a>
+							</li>
+							<!-- <li class="link project-link see-api">
+								<a href="" target="_blank"><i class="fa fa-server"></i>See the API</a>
+							</li>
+							<li class="link project-link see-github">
+								<a href="" target="_blank"><i class="fa fa-github"></i>See on Github</a>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+				<div class="pictures-container col-xs-12 col-sm-3">	
+					<img class="img-responsive" src="pictures/projects/kidkards.png">
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- Default Text Section -->
 		<div class="section gitconnect theme-color col-xs-12">
@@ -136,7 +159,7 @@
 							<li class="tech neo4j" data-techname="Neo4j"></li>
 							<li class="tech firebase" data-techname="Firebase"></li>
 							<li class="tech protractor" data-techname="Protractor"></li>
-							<li class="tech github" data-techname="Github"></li>
+							<li class="tech github" data-techname="Github API"></li>
 						</ul>
 					</div>
 					<a href="http://gitconnect.me" target="_blank" class="link project-link first see-project"><i class="fa fa-chevron-circle-right"></i>See the project</a>

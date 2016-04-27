@@ -35,26 +35,33 @@
     }
   }
 
-   // Tech list
   .main {
-    .technologies {
-      ul {
-        padding-right: 80px;
-        height: 20px;
-        li {
-          &.tech {
-            width: 20px;
-            height: 20px;
-            &:before {
-              font-size: 0px;
-            }
-            &:hover {
-              opacity: 1;
-              &:before {
-                font-size: 0px;
+    section, .section {
+      .inner-section-container {
+        .inner-section {
+          h2 {
+            text-align: center;
+          }
+          .technologies {
+            ul {
+              padding-right: 0px;
+              text-align: center;
+              li {
+                margin: 0px 10px 20px;
+                opacity: 0.8;
+                &::before {
+                  margin-left: -75% !important;
+                }
               }
             }
           }
+          .links-container {
+            text-align: center;
+          }
+        }
+        .pictures-container {
+          position: relative;
+          left: 0px;
         }
       }
     }
@@ -65,18 +72,13 @@
   .main {
     .section {
       .inner-section-container {
-        position: relative;
-        min-height: 300px;
-        display: table;
         .inner-section {
-          display: table-cell;
-          vertical-align: middle;
           h2 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
           }
           p {
-            font-size: 14px;
+            font-size: 16px;
           }
         }
       }

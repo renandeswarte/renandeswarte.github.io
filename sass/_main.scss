@@ -1,23 +1,113 @@
 .main {
-  .section {
+  section, .section {
     .inner-section-container {
       position: relative;
-      min-height: 300px;
-      display: table;
       .inner-section {
-        display: table-cell;
-        vertical-align: middle;
-        padding-right: 50px;
+        padding: 30px 10px;
         h2 {
           font-size: 24px;
           font-weight: bold;
         }
         p {
           font-size: 18px;
-          color: #000;
+          color: $blackColor;
+        }
+
+        .links-container {
+          margin-top: 20px;
+          ul {
+            margin-bottom: 0px;
+            .link {
+              margin: 5px 5px;
+              &.project-link{
+                display: inline-block;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 10px 10px 10px 11px;
+                color: $whiteColor;
+                border-radius: 20px;
+                background-color: rgba(0,0,0,0.4);
+                transition: all 0.3s ease;
+                overflow: hidden;
+                white-space: nowrap;
+                text-decoration: none;
+                right: 20px;
+                i {
+                  margin-right: 10px;
+                }
+                a {
+                  color: $whiteColor;
+                  text-decoration: none;
+                }
+                &:visited, &:hover {
+                  background-color: rgba(0,0,0,0.6);
+                  text-decoration: none;
+                  color: $whiteColor;
+                }
+            }
+          }
+        }
+      }
+
+
+      .technologies {
+        padding: 20px 0px 0px;
+        ul {
+          display: inline-block;
+          margin-bottom: 0px;
+          li {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            &.tech {
+              @include bg-cover();
+              @include box-shadow(0px, 0px, 5px, 2px, rgba(0,0,0,0.2));
+              width: 40px;
+              height: 40px;
+              opacity: 0.3;
+              border-radius: 50%;
+              transition: all 0.4s ease;
+              position: relative;
+              &:before {
+                transition: all 0.4s ease;
+                content: attr(data-techname);
+                position: absolute;
+                top: -20px;
+                color: #555;
+                font-size: 10px;
+                text-align: center;
+                font-weight: bold;
+                opacity: 0;
+                width: 150%;
+                margin-left: -25%;
+              }
+              &:hover {
+                opacity: 1;
+                &:before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
         }
       }
     }
+
+    .pictures-container {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 75%;
+      @include flexCenter();
+      margin-top: 10px;
+      margin-bottom: 10px;
+      img {
+        max-height: 100%;
+        border-radius: 3px;
+      }
+    }
+  }
+
     // Theme color bloc modifications
     &.theme-color {
       background-color: $themeColor;
@@ -36,25 +126,16 @@
       }
       .tech {
         &:before {
-          color: $whiteColor;
+          color: $whiteColor !important;
         }
       }
     }
-    &.gitconnect {
-      @include bg-cover();
-      .tech {
-        &:before {
-          color: $whiteColor;
-        }
-      }
-    }
-    &.snake {
-      @include bg-cover();
-    }
+
     &.cube{
       background-image: url('../pictures/bg/cube-speed.gif');
       background-repeat: no-repeat;
     }
+
     &.shape {
       .inner-section {
         padding-right: 0px;
@@ -81,110 +162,7 @@
     }
   }
 
-  // Github & Project page links
-  .link {
-    &.project-link{
-      position: absolute;
-      font-size: 16px;
-      line-height: 16px;
-      padding: 10px 10px 10px 11px;
-      color: $whiteColor;
-      border-radius: 20px;
-      background-color: rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-      overflow: hidden;
-      width: 36px;
-      height: 36px;
-      white-space: nowrap;
-      text-decoration: none;
-      right: 20px;
-      i {
-        margin-right: 12px;
-      }
-      &:visited, &:hover {
-        background-color: rgba(0,0,0,0.6);
-        text-decoration: none;
-        color: $whiteColor;
-      }
-      &.see-app {
-        i {
-          margin-right: 13px;
-        }
-      }
-      &.first {
-        bottom: 20px;
-      }
-      &.second {
-        bottom: 60px;
-      }
-      &.third {
-        bottom: 100px;
-      }
-      &.fourth {
-        bottom: 140px;
-      }
-      &.expand {
-        &.see-project {
-          width: 160px;
-        }
-        &.see-github {
-          width: 150px;
-        }
-        &.see-app {
-          width: 130px;
-        }
-        &.see-api {
-          width: 140px;
-        }
-      }
-    }
-  }
 
-  // Tech list
-  .technologies {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    ul {
-      display: inline-block;
-      margin-bottom: 0px;
-      height: 40px;
-      padding-right: 80px;
-      li {
-        display: inline-block;
-        margin-right: 10px;
-        &.tech {
-          @include bg-cover();
-          @include box-shadow(0px, 0px, 5px, 2px, rgba(0,0,0,0.2));
-          width: 40px;
-          height: 40px;
-          opacity: 0.3;
-          border-radius: 50%;
-          transition: all 0.4s ease;
-          position: relative;
-          &:before {
-            transition: all 0.4s ease;
-            content: attr(data-techname);
-            position: absolute;
-            top: -20px;
-            color: #555;
-            width: 100%;
-            font-size: 10px;
-            text-align: center;
-            font-weight: bold;
-            opacity: 0;
-          }
-          &:hover {
-            opacity: 1;
-            &:before {
-              opacity: 1;
-            }
-          }
-        }
-
-      }
-    }
-  }
   // Tech pictures
   .technologies {
     ul {
@@ -267,30 +245,3 @@
     }
   }  
 }
-
-@media (max-width:479px) {
-  .main {
-    .section {
-      .inner-section-container {
-        position: relative;
-        min-height: 300px;
-        display: table;
-        .inner-section {
-          display: table-cell;
-          vertical-align: middle;
-          h2 {
-            font-size: 20px;
-            font-weight: bold;
-          }
-          p {
-            font-size: 14px;
-            margin-bottom: 50px;
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
