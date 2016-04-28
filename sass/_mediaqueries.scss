@@ -1,4 +1,22 @@
 // Mobile Overide
+@media (max-width:479px) {
+  .main {
+    .section {
+      .inner-section-container {
+        .inner-section {
+          h2 {
+            font-size: 22px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .header {
     padding: 20px 0;
@@ -68,21 +86,39 @@
   }
 }
 
-@media (max-width:479px) {
-  .main {
-    .section {
-      .inner-section-container {
-        .inner-section {
-          h2 {
-            font-size: 22px;
-            font-weight: bold;
-          }
-          p {
-            font-size: 16px;
-          }
+@media (min-width: 768px) {
+  .header {
+    .picture-container {
+      max-width: 200px;
+    }
+    .informations {
+      .inner-text{
+      }
+    }
+    .header-links {
+      text-align: right;
+      max-width: 130px;
+      float: right;
+      margin-right: 10px;
+    }
+    .inner-text {
+      a {
+        width: 110px;
+        text-align: left;
+        display: inline-block;
+        &.middle {
+          margin-top: 5px;
+          margin-bottom: 5px;
         }
       }
     }
   }
 }
 
+@media (min-width: 992px) {
+  .header {
+    .header-links {
+      margin-right: 50px;
+    }
+  }
+}
