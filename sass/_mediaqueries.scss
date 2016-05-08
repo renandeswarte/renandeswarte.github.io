@@ -64,9 +64,15 @@
             ul {
               padding-right: 0px;
               text-align: center;
-              li {
+              li.tech {
                 margin: 0px 10px 20px;
                 opacity: 0.8;
+                &.mouse-touched {
+                  opacity: 1;
+                  &::before {
+                    opacity: 1;
+                  }
+                }
                 &::before {
                   margin-left: -75% !important;
                 }
